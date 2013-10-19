@@ -13,4 +13,5 @@ before_script:
 - mysql -e 'create database saveling_test'
 notifications:
   hipchat:
-  - secure: "gRoCJVyeVbcDngdnka67SNAR8q8fVqV50Frv2TeGmSdhPOnrtqiVUGTeXbXYzmwIBCAH+ZzHfvC6mquUWMZx8j7M/g+egk0trIgU2R6TD1f1ofGBiYh/oI5HaXw76zIjJXaxUkMv7bmG4UKnnsXkFTGJuwQgOtbkh1GT/o3Nphk="
+    rooms:
+      secure: aR5wCrU3yTjgL6sROlgNeC9NAiZzyavon0tqSS+Gus5cxMIiiMHZi7Gcg/bdS0OjEl8w1MXKFnCvdaPDj11UzonXM4IJBwnrhwOOqkbT6yNHrCLS+/rFQikUfDkcotCh5Ut5TacF0jVsVjNr12Qunpgry8lPY52EH8qBDiKD7Nw=
