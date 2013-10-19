@@ -12,8 +12,4 @@ before_script:
 - cp config/database.travis.yml config/database.yml
 - mysql -e 'create database saveling_test'
 notifications:
-  hipchat:
-    rooms:
-      secure: aR5wCrU3yTjgL6sROlgNeC9NAiZzyavon0tqSS+Gus5cxMIiiMHZi7Gcg/bdS0OjEl8w1MXKFnCvdaPDj11UzonXM4IJBwnrhwOOqkbT6yNHrCLS+/rFQikUfDkcotCh5Ut5TacF0jVsVjNr12Qunpgry8lPY52EH8qBDiKD7Nw=
-    on_success: always
-    on_failure: always
+  hipchat: e6a9e3327fdd58fd859c36cc236faf@saveling-dev
