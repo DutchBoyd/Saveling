@@ -37,4 +37,14 @@ namespace :deploy do
   end
 
   after :finishing, 'deploy:cleanup'
+  after :published, 'figaro:create_symlink'
+end
+
+namespace :figaro do
+  desc "Symlink application.yml to the release path"
+  task :create_symlink do
+    on roles(:web) do
+      execute "ln -nfs #{shared_path}/config/application.yml #{release_path}/config/application.yml"
+    end
+  end
 end
