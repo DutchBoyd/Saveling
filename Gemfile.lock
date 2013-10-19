@@ -207,6 +207,13 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mandrill-api (1.0.49)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
+    mandrill_mailer (0.4.0)
+      actionpack
+      activesupport
+      mandrill-api (~> 1.0.9)
     method_source (0.8.2)
     mime-types (1.25)
     mini_portile (0.5.1)
@@ -383,6 +390,7 @@ DEPENDENCIES
   hub
   jbuilder (~> 1.2)
   jquery-rails
+  mandrill_mailer
   money-rails
   mysql2
   puma
