@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019005512) do
+ActiveRecord::Schema.define(version: 20131019012357) do
+
+  create_table "items", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "price_cents",    default: 0,     null: false
+    t.string   "price_currency", default: "USD", null: false
+    t.integer  "owner_id"
+    t.integer  "borrower_id"
+    t.integer  "status_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "items", ["borrower_id"], name: "index_items_on_borrower_id", using: :btree
+  add_index "items", ["owner_id"], name: "index_items_on_owner_id", using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"
