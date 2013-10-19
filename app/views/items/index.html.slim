@@ -1,0 +1,12 @@
+h3 Items
+.span8
+  span= link_to("Add Item", { controller: "items", action: "new" })
+  table.table.table-condensed
+    thead
+      tr
+        th Name
+        th Description
+    - current_user.items.each do |i|
+      tr
+        td= i.name
+        td= i.description

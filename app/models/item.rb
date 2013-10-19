@@ -5,6 +5,6 @@ class Item < ActiveRecord::Base
   monetize :price_cents
 
   accepts_nested_attributes_for :images
-
-
+  belongs_to :owner, class_name: 'User'
+  belongs_to :borrower, class_name: 'User'
 end
