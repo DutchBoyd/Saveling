@@ -17,10 +17,14 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'slim'
 gem 'zurb-foundation'
 gem 'money-rails'
+gem 'carrierwave'
+gem 'fog'
+
 group :assets do
   gem 'therubyracer', :platform=>:ruby
 end
 group :development do
+  gem 'activeadmin', github: 'gregbell/active_admin'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'capistrano'

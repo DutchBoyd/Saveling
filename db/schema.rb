@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019012357) do
+ActiveRecord::Schema.define(version: 20131019040058) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "item_images", force: true do |t|
+    t.integer  "item_id"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "item_images", ["item_id"], name: "index_item_images_on_item_id", using: :btree
 
   create_table "items", force: true do |t|
     t.string   "name"
@@ -27,6 +42,15 @@ ActiveRecord::Schema.define(version: 20131019012357) do
 
   add_index "items", ["borrower_id"], name: "index_items_on_borrower_id", using: :btree
   add_index "items", ["owner_id"], name: "index_items_on_owner_id", using: :btree
+
+  create_table "items_categories", id: false, force: true do |t|
+    t.integer "item_id"
+    t.integer "category_id"
+  end
+
+  add_index "items_categories", ["category_id", "item_id"], name: "index_items_categories_on_category_id_and_item_id", using: :btree
+  add_index "items_categories", ["category_id"], name: "index_items_categories_on_category_id", using: :btree
+  add_index "items_categories", ["item_id"], name: "index_items_categories_on_item_id", using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"
