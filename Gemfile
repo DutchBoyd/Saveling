@@ -36,6 +36,7 @@ group :development do
   gem 'coderay', '~> 1.0.5'
   gem 'guard-rails'
   gem 'guard-rspec'
+  gem 'guard-livereload', require: false
   gem 'haml-rails'
   gem 'haml2slim'
   gem 'html2haml'

@@ -1260,7 +1260,7 @@ $topbar-bg-color: #fff;
 
 // Height and margin
 
-// $topbar-height: 45px;
+$topbar-height: 20px;
 $topbar-margin-bottom: 0;
 
 // Control Input height for top bar
@@ -1316,8 +1316,8 @@ $topbar-link-bg-active: #fff; // darken($topbar-bg-color, 3%);
 
 // Divider Styles
 
-// $topbar-divider-border-bottom: solid 1px lighten($topbar-bg-color, 10%);
-//  $topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%);
+// $topbar-divider-border-bottom: solid 2px lighten($topbar-link-color, 10%);
+$topbar-divider-border-top: solid 2px $topbar-link-color;
 
 // Sticky Class
 
