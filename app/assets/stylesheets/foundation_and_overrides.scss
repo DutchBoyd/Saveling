@@ -65,7 +65,7 @@ $default-float: left;
 
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: helvetica, verdana; //"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -79,7 +79,7 @@ $default-float: left;
 
 // Colors
 
-// $primary-color: #2ba6cb;
+$primary-color: #696969;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
@@ -177,7 +177,7 @@ $default-float: left;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
-// $header-top-margin: .2em;
+// $header-top-margin: 50px;
 // $header-bottom-margin: .5em;
 // $header-text-rendering: optimizeLegibility;
 
@@ -1255,13 +1255,13 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg-color: #111;
+$topbar-bg-color: #fff;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 
-// $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+$topbar-height: 20px;
+$topbar-margin-bottom: 0;
 
 // Control Input height for top bar
 
@@ -1283,14 +1283,14 @@ $default-float: left;
 
 // Set the link colors and styles for top-level nav
 
-// $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
+$topbar-link-color: #696969;
+$topbar-link-color-hover: #008000;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: bold;
-// $topbar-link-font-size: em-calc(13);
+$topbar-link-font-size: em-calc(16);
 // $topbar-link-hover-lightness: -30%; // Darken by 30%
-// $topbar-link-bg-hover: darken($topbar-bg-color, 3%);
-// $topbar-link-bg-active: darken($topbar-bg-color, 3%);
+$topbar-link-bg-hover: #fff; // darken($topbar-bg-color, 3%);
+$topbar-link-bg-active: #fff; // darken($topbar-bg-color, 3%);
 
 // $topbar-dropdown-label-color: #555;
 // $topbar-dropdown-label-text-transform: uppercase;
@@ -1316,8 +1316,8 @@ $default-float: left;
 
 // Divider Styles
 
-// $topbar-divider-border-bottom: solid 1px lighten($topbar-bg-color, 10%);
-//  $topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%);
+// $topbar-divider-border-bottom: solid 2px lighten($topbar-link-color, 10%);
+$topbar-divider-border-top: solid 2px $topbar-link-color;
 
 // Sticky Class
 
