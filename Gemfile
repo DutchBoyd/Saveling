@@ -23,6 +23,7 @@ gem 'fog'
 group :assets do
   gem 'therubyracer', :platform=>:ruby
 end
+
 group :development do
   gem 'activeadmin', github: 'gregbell/active_admin'
   gem 'better_errors'
@@ -43,7 +44,9 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+  gem "rails-erd"
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'puma'
