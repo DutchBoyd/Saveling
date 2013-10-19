@@ -19,6 +19,7 @@ gem 'zurb-foundation'
 gem 'money-rails'
 gem 'carrierwave'
 gem 'fog'
+gem 'mandrill_mailer'
 
 group :assets do
   gem 'therubyracer', :platform=>:ruby
