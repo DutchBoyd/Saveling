@@ -4,8 +4,8 @@ sqlite: &sqlite
 
 mysql: &mysql
   adapter: mysql2
-  username: root
-  password:
+  username: travis
+  encoding: utf8
   database: saveling_<%= Rails.env %>
 
 postgresql: &postgresql
