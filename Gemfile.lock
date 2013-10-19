@@ -59,6 +59,14 @@ GEM
       thor
     builder (3.1.4)
     cancan (1.6.10)
+    capistrano (3.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 0.0.23)
+    capistrano-bundler (1.0.0)
+      capistrano (>= 3.0.0.pre)
+    capistrano-rails (1.0.0)
+      capistrano
     capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -296,7 +304,13 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sshkit (1.1.0)
+      net-scp
+      net-ssh
+      term-ansicolor
     temple (0.6.7)
+    term-ansicolor (1.2.2)
+      tins (~> 0.8)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
@@ -305,6 +319,7 @@ GEM
       atomic
     tilt (1.4.1)
     timers (1.1.0)
+    tins (0.12.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -334,6 +349,9 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   cancan
+  capistrano
+  capistrano-bundler
+  capistrano-rails
   capybara
   carrierwave
   coderay (~> 1.0.5)

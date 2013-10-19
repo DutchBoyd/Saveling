@@ -28,6 +28,9 @@ group :development do
   gem 'activeadmin', github: 'gregbell/active_admin'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
   gem 'guard',  '>=2.1.0'
   gem 'guard-bundler'
   gem 'coderay', '~> 1.0.5'
