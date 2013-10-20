@@ -15,11 +15,49 @@
 //= require skrollr
 //= require foundation
 //= require turbolinks
+//= require masonry.pkgd.min
+//= require imagesloaded.pkgd.min.js
 //= require_tree .
 
 $(function(){ 
   $(document).foundation(); 
   skrollr.init({
-      forceHeight: false
-    });
+    forceHeight: false
+  });
+  
+  // var msnry = new Masonry( container, {
+  //   itemSelector: '.box',
+  //   isFitWidth: true,
+  //   animate: true
+  // })
+  // var $container= $('#masonry');
+  // $container.masonry({
+  //   columnWidth: 238,
+  //   // isFitWidth: true,
+  //   itemSelector: '.box',
+  //   // animate: true
+
+  // });
+
+  // var msnry = new Masonry( container, {
+  //   itemSelector: '.box',
+  //   columnWidth: 238
+  // });
+  // imagesLoaded(container, functino(){
+  //   msnry.layout()
+  // })
+  var $container = $('#masonry');
+  $container.imagesLoaded(function() {
+      $container.masonry({
+          itemSelector : '.box',
+          animate: true,
+          columnWidth: 238,
+          isFitWidth: true,
+          gutter: 10
+      });
+  });
+  // var $container = $('#asdf').masonry();
+  // $container.imagesLoaded( function() {
+  //   $container.masonry();
+  // });
 });

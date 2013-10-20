@@ -1,10 +1,10 @@
 .row.collapse
-  .large-1.columns.grey-float
-    ul#categories
+  .large-1.columns#categories.grey-float.hide-for-touch data-0="top: 100px;" data-80="top: -17px;"
+    ul
       - Category.all.each do |cat|
        li.category
           = link_to '&nbsp;'.html_safe, "##{cat.name.parameterize}", id: cat.name.parameterize
-  .large-11.columns
+  .large-12.columns
     .row
       .large-6.columns.grey-float.large-centered#search-box
         = simple_form_for :search, :url => '/search' do |f|
@@ -18,8 +18,17 @@
                 .small-4.columns
                   = f.submit 'Go!', class: 'button radius'
     .row
-      .large-9.columns.large-centered
-        ul.large-block-grid-4
+      .large-12.columns
+        #masonry
           - @items.each do |item|
-            li.grey-float 
-              span= item.name
+            .box.grey-float
+              .row
+                .small-12.columns= image_tag(item.images.first.try(:image_url))
+              .row
+                .small-12.columns= item.name
+              .row
+                .small-12.columns= humanized_money_with_symbol item.price
+        / ul.large-block-grid-4
+        /   - @items.each do |item|
+        /     li.grey-float 
+        /       span= item.name
