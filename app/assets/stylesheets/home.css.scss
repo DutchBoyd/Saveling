@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .home.index{
-  #skrollr-body{
+  #container.container{
     // position: absolute;
     background: image-url('sharing_1.jpg') repeat fixed;
-    background-size: 100%;
+    background-size: cover;
+    padding: 0px;
     // height: 100%;
 
   }
@@ -17,10 +18,26 @@
         margin-bottom: 0;
       }
     }
-  }
 
+  }
+  #masonry{
+    // clear: both;
+    margin: 0 auto;
+    position: relative;
+
+  }
+  .box{
+    width: 238px;
+    margin-bottom: 10px;
+    // background: white;
+  }
   #categories{
-    list-style: none;
+    position: fixed;
+    left: 0px;
+    width: 91px;
+    ul{
+      list-style: none;
+    }
     .category a{
       display: block;
       width: 59px;
