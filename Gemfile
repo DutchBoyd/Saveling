@@ -20,6 +20,7 @@ gem 'money-rails'
 gem 'carrierwave'
 gem 'fog'
 gem 'mandrill_mailer'
+gem 'mini_magick'
 
 group :assets do
   gem 'therubyracer', :platform=>:ruby

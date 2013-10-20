@@ -6,7 +6,9 @@ h3 Items
       tr
         th Name
         th Description
+        th Thumbnail
     - current_user.items.each do |i|
       tr
         td= i.name
         td= i.description
+        td= image_tag i.images.first.image_url(:thumb) if i.images.present?

@@ -216,6 +216,8 @@ GEM
       mandrill-api (~> 1.0.9)
     method_source (0.8.2)
     mime-types (1.25)
+    mini_magick (3.6.0)
+      subexec (~> 0.2.1)
     mini_portile (0.5.1)
     minitest (4.7.5)
     money (5.1.1)
@@ -324,6 +326,7 @@ GEM
       net-scp
       net-ssh
       term-ansicolor
+    subexec (0.2.3)
     temple (0.6.7)
     term-ansicolor (1.2.2)
       tins (~> 0.8)
@@ -391,6 +394,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mandrill_mailer
+  mini_magick
   money-rails
   mysql2
   puma

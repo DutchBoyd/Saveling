@@ -1,6 +1,10 @@
 h3 Add Item
 .span8
-  = simple_form_for @item do |f|
-    = f.input :name
-    = f.input :description
-    = f.button :submit
+  = simple_form_for @item, html: {multipart: true} do |f|
+    = f.simple_fields_for :images do |i|
+      = i.file_field :image
+      = i.hidden_field :image_cache
+      = f.input :name
+      = f.input :description
+      = f.input :price
+      = f.submit
