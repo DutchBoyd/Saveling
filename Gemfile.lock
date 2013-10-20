@@ -138,6 +138,7 @@ GEM
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
     fssm (0.2.10)
+    geocoder (1.1.8)
     guard (2.1.1)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -382,6 +383,7 @@ DEPENDENCIES
   factory_girl_rails
   figaro
   fog
+  geocoder
   guard (>= 2.1.0)
   guard-bundler
   guard-livereload
