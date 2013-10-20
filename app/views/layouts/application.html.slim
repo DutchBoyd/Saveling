@@ -4,6 +4,7 @@ html
     meta content="width=device-width, initial-scale=1.0" name="viewport" 
       title= content_for?(:title) ? yield(:title) : "Saveling Web"
       meta content=(content_for?(:description) ? yield(:description) : "Saveling Web") name="description" 
+        link href='http://fonts.googleapis.com/css?family=Allerta' rel='stylesheet' type='text/css'
         = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true 
         = javascript_include_tag "application", "data-turbolinks-track" => true
         = csrf_meta_tags
@@ -13,7 +14,9 @@ html
       header
         = render 'layouts/navigation'
         = render 'layouts/messages'
-      #main role="main" 
+      #main.row role="main" 
         = yield
-      footer
+    footer#footer
+      .row 
+        .large-6.columns.large-centered This is footer content
     /! ! end of #container
