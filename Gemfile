@@ -21,6 +21,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'mandrill_mailer'
 gem 'mini_magick'
+gem 'geocoder'
 
 group :assets do
   gem 'therubyracer', :platform=>:ruby

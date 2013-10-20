@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
   has_many :items, foreign_key: :owner_id
+  geocoded_by :creation_ip
+  after_validation :geocode
 end

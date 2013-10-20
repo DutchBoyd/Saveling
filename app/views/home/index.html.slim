@@ -1,0 +1,15 @@
+section.main
+  .row
+    .large-6.columns
+      = simple_form_for :search, :url => '/search' do |f|
+        fieldset
+          .row
+            .large-6.columns
+              = f.input :item, required: false, label: false, placeholder: 'Riding Lawnmower'
+            .large-6.columns
+              .row.collapse
+                .small-8.columns
+                  = f.input :city, input_html: { value: request.location.city }, required: false, label: false
+                .small-4.columns
+                  a.button.prefix Search
+
