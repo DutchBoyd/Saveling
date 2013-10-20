@@ -1,6 +1,11 @@
-h1. Saveling Web
+h1. What is Saveling?
 
-This application was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.io/.
+Saveling is a peer-to-peer physical item sharing platofrm developed durin ghte 48-hour Rails Rumble 2013 competition. The development team consists of :
+
+Robert Boyd
+Dutch Boyd
+Laura Cabrera
+Josh Smith
 
 h2. Diagnostics
 
