@@ -1,27 +1,26 @@
-.contain-to-grid
-  nav.top-bar  
-    ul.title-area
-      li.name= link_to image_tag('saveling.png'), root_path
-    section.top-bar-section.left
-      ul
-        li.tagline Share Your Stuff. Borrow Theirs.
-    section.top-bar-section.right
-      ul
-        - if user_signed_in?
+nav.top-bar  
+  ul.title-area
+    li.name= link_to image_tag('saveling.png'), root_path
+  section.top-bar-section.left
+    ul
+      li.tagline Share Your Stuff. Borrow Theirs.
+  section.top-bar-section.right
+    ul
+      - if user_signed_in?
+        li
+          = link_to 'My Stuff', user_items_path(current_user)
+        li
+          = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+      - else
+        li
+          = link_to 'Sign In', new_user_session_path
+      - if user_signed_in?
+        li
+          = link_to 'Edit account', edit_user_registration_path
+        - if current_user.has_role? :admin
           li
-            = link_to 'My Stuff', user_items_path(current_user)
-          li
-            = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-        - else
-          li
-            = link_to 'Sign In', new_user_session_path
-        - if user_signed_in?
-          li
-            = link_to 'Edit account', edit_user_registration_path
-          - if current_user.has_role? :admin
-            li
-              = link_to 'Admin', users_path
-        - else
-          li |
-          li
-            = link_to 'Create Account', new_user_registration_path
+            = link_to 'Admin', users_path
+      - else
+        li |
+        li
+          = link_to 'Create Account', new_user_registration_path
