@@ -12,10 +12,20 @@
  *= require foundation_and_overrides
  *= require_tree .
 */
-.brand {
-  float: left;
-  padding-right: 8px;
+
+@import "compass/css3";
+
+@mixin data-uri-bg($image, $properties: false){
+  @if( $properties != false){
+    background: inline-image("#{$image}") $properties;
+    *background: url("../assets/"+$image) $properties;
+  }
+  @else{
+    background: inline-image("#{$image}");
+    *background: url("../assets/"+$image);
+  }
 }
+
 ul.nav {
   list-style: none;
   margin: 0 0 2em;
@@ -38,7 +48,64 @@ ul.nav li {
 }
 
 nav.top-bar{
-  margin-top: 30px;
+  padding-top: 30px;
   padding-left: 50px;
   padding-right: 50px;
+  font-family: 'Allerta', helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  // a{
+  //   font-family: 'Allerta', helvetica, sans-serif;
+  // }
+  li{
+    color: #68a262;
+    &.tagline{
+      color: #8c9896;
+      text-transform: uppercase;
+      font-weight: bold;
+      // position: absolute;
+      // top: 20px;
+      // left: 10px;
+      // width: 300px;
+    }
+  }
+  .top-bar-section {
+    &.left{margin-top: 20px;}
+    &.right{margin-top: 10px;}
+    position: relative;
+    
+    li a:not(.button){
+      line-height: 1.6em;
+      padding: 0 1em;
+    }  
+  }
+}
+
+
+html, body {
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+}
+
+#main{
+  padding-bottom: 150px;
+}
+#footer {
+  position: relative;
+  margin-top: -150px;
+  height: 150px;
+  clear: both;
+}
+
+.grey-float {
+  background: #f9f9f9;
+  background: rgba(240,240,240,.7);
+  padding: 1em;
+  margin: 1em auto;
+  border: 1px solid #bbb;
+  @include border-radius(25px);
 }

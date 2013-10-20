@@ -22,6 +22,7 @@ gem 'fog'
 gem 'mandrill_mailer'
 gem 'mini_magick'
 gem 'geocoder'
+gem 'skrollr-rails'
 
 group :assets do
   gem 'therubyracer', :platform=>:ruby
