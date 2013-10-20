@@ -1,0 +1,18 @@
+.span8
+  .row
+    h3 Edit Item
+  .row
+    = simple_form_for @item, html: {multipart: true} do |f|
+      = f.simple_fields_for :images do |i|
+        = i.input :image_url
+        = i.label 'Add Image'
+        = i.file_field :image, label: 'Add Image'
+        = i.hidden_field :image_cache
+      = f.input :name
+      = f.input :description
+      = f.input :price
+      = f.submit
+  .row
+    h3 Current Images
+    - @item.images.each do |img|
+      span= image_tag img.image_url(:thumb)
