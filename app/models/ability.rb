@@ -26,6 +26,7 @@ class Ability
     # For example, here the user can only update published articles.
     #
     can :manage, Item, :owner => user
+    can :read, Item
     #   can :update, Article, :published => true
     #
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities

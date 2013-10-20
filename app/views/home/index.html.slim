@@ -27,7 +27,7 @@
               .row
                 .small-12.columns= item.name
               .row
-                .small-12.columns= humanized_money_with_symbol item.price
+                .small-12.columns= humanized_money_with_symbol(item.price) + "/week"
           / ul.large-block-grid-4
           /   - @items.each do |item|
           /     li.grey-float 
