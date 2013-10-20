@@ -12,7 +12,7 @@ h3 Items
       tr
         td= i.name
         td= i.description
-        td= image_tag i.images.where('image is NOT NULL').first.image_url(:thumb) if i.images.present?
+        td= image_tag i.images.where('image is NOT NULL').first.try(:image_url, :thumb) if i.images.present?
         td
           = link_to 'Edit', edit_item_path(i)
           '|
