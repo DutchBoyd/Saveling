@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  load_and_authorize_resource
+  skip_authorize_resource :only => :new
+
   def index; end
 
   def new
@@ -6,8 +9,8 @@ class ItemsController < ApplicationController
     @item.images.build
   end
 
-  def create 
-    @item = Item.create(new_item_params.merge(owner: current_user))
+  def create
+    @item = Item.create(item_params.merge(owner: current_user))
     redirect_to user_items_path(current_user)
   end
 
@@ -16,21 +19,19 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
-    @item.update_attributes(new_item_params)
+    @item.update_attributes(item_params)
     @item.save!
     redirect_to user_items_path(current_user)
   end
 
   def destroy
-    @item = Item.find(params[:id])
     @item.delete
     redirect_to user_items_path(current_user)
   end
 
   private
 
-  def new_item_params
+  def item_params
     params.require(:item).permit(:name, :description, :price, images_attributes: [ :image ])    
   end 
 end
