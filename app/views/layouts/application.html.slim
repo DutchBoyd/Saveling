@@ -1,22 +1,22 @@
 doctype html
 html
   head
-    meta content="width=device-width, initial-scale=1.0" name="viewport" 
-      title= content_for?(:title) ? yield(:title) : "Saveling Web"
-      meta content=(content_for?(:description) ? yield(:description) : "Saveling Web") name="description" 
-        link href='http://fonts.googleapis.com/css?family=Allerta' rel='stylesheet' type='text/css'
-        = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true 
-        = javascript_include_tag "application", "data-turbolinks-track" => true
-        = csrf_meta_tags
-        = yield(:head)
-
-  body class=("#{controller_name} #{action_name}") 
-    #container.container 
+  meta content="width=device-width, initial-scale=1.0" name="viewport" 
+    title= content_for?(:title) ? yield(:title) : "Saveling Web"
+    meta content=(content_for?(:description) ? yield(:description) : "Saveling Web") name="description" 
+    link href='http://fonts.googleapis.com/css?family=Allerta' rel='stylesheet' type='text/css'
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true 
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    = yield(:head)
+  body#skrollr-body class=("#{controller_name} #{action_name}") 
+    #container.container data-0="background-position:0px 0px;" data-1000000="background-position:0px -50000px;"
       header
         = render 'layouts/navigation'
         = render 'layouts/messages'
       #main.row role="main"
-        #skrollr-body.large-12.columns data-0="background-position:0px 0px;" data-1000000="background-position:0px -50000px;"= yield
+        .large-12.columns 
+          = yield
     / .row
     /   #background 
     footer#footer
