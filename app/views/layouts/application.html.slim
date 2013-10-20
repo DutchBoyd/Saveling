@@ -9,6 +9,8 @@ html
         = javascript_include_tag "application", "data-turbolinks-track" => true
         = csrf_meta_tags
         = yield(:head)
+    = javascript_include_tag src="http://s0.railsrumble.com/banner.js" type="text/javascript"
+
   body class=("#{controller_name} #{action_name}") 
     #container.container 
       header
