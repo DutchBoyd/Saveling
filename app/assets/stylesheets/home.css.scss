@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .home.index{
-  #main{
+  #skrollr-body{
     // position: absolute;
     background: image-url('sharing_1.jpg') repeat fixed;
     background-size: 100%;
@@ -17,5 +17,10 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  #categories{
+    list-style: none;
+    
   }
 }
