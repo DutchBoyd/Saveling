@@ -25,27 +25,6 @@ $(function(){
     forceHeight: false
   });
   
-  // var msnry = new Masonry( container, {
-  //   itemSelector: '.box',
-  //   isFitWidth: true,
-  //   animate: true
-  // })
-  // var $container= $('#masonry');
-  // $container.masonry({
-  //   columnWidth: 238,
-  //   // isFitWidth: true,
-  //   itemSelector: '.box',
-  //   // animate: true
-
-  // });
-
-  // var msnry = new Masonry( container, {
-  //   itemSelector: '.box',
-  //   columnWidth: 238
-  // });
-  // imagesLoaded(container, functino(){
-  //   msnry.layout()
-  // })
   var $container = $('#masonry');
   $container.imagesLoaded(function() {
       $container.masonry({
@@ -56,8 +35,10 @@ $(function(){
           gutter: 10
       });
   });
-  // var $container = $('#asdf').masonry();
-  // $container.imagesLoaded( function() {
-  //   $container.masonry();
-  // });
+
+  $('#search_item').fastLiveFilter('#masonry',{
+    callback: function(){
+      $container.masonry();
+    }
+  })
 });
