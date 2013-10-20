@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "compass/css3";
+
 .home.index{
   #container.container{
     // position: absolute;
@@ -30,6 +32,9 @@
     width: 238px;
     margin-bottom: 10px;
     // background: white;
+    &:hover{
+      @include box-shadow(#333 0px 0px 10px);
+    }
   }
   #categories{
     position: fixed;
