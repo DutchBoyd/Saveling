@@ -14,8 +14,8 @@ html
       header
         = render 'layouts/navigation'
         = render 'layouts/messages'
-        #main.row role="main" data-0="background-position:0px 0px;" data-1000000="background-position:0px -50000px;"
-          #skrollr-body= yield
+      #main.row role="main"
+        #skrollr-body.large-12.columns data-0="background-position:0px 0px;" data-1000000="background-position:0px -50000px;"= yield
     / .row
     /   #background 
     footer#footer

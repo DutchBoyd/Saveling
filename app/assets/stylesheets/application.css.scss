@@ -104,8 +104,8 @@ html, body {
 .grey-float {
   background: #f9f9f9;
   background: rgba(240,240,240,.7);
-  padding: 1em;
+  padding: 0.9375em !important;
   margin: 1em auto;
   border: 1px solid #bbb;
-  @include border-radius(25px);
+  @include border-radius(15px);
 }
