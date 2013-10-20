@@ -26,6 +26,13 @@ $(function(){
   });
   
   var $container = $('#masonry');
+  $container.masonry({
+          itemSelector : '.box',
+          animate: true,
+          columnWidth: 238,
+          isFitWidth: true,
+          gutter: 10
+      });
   $container.imagesLoaded(function() {
       $container.masonry({
           itemSelector : '.box',
