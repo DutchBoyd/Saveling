@@ -65,7 +65,7 @@ $default-float: left;
 
 // $body-bg: #fff;
 // $body-font-color: #222;
-$body-font-family: helvetica, verdana; //"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: Georgia, Verdana, Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -149,7 +149,7 @@ $primary-color: #696969;
 // Grid Variables
 //
 
-// $row-width: em-calc(1000);
+$row-width: em-calc(1120);
 // $column-gutter: em-calc(30);
 // $total-columns: 12;
 
@@ -1260,7 +1260,7 @@ $topbar-bg-color: #fff;
 
 // Height and margin
 
-$topbar-height: 20px;
+$topbar-height: 80px;
 $topbar-margin-bottom: 0;
 
 // Control Input height for top bar
@@ -1276,15 +1276,15 @@ $topbar-margin-bottom: 0;
 
 // $topbar-dropdown-bg: #222;
 // $topbar-dropdown-link-color: #fff;
-// // $topbar-dropdown-link-bg: lighten($topbar-bg-color, 5%);
+// $topbar-dropdown-link-bg: lighten($topbar-bg-color, 5%);
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.5;
 
 // Set the link colors and styles for top-level nav
 
-$topbar-link-color: #696969;
-$topbar-link-color-hover: #008000;
+$topbar-link-color: #68a262;
+$topbar-link-color-hover: #696969;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: bold;
 $topbar-link-font-size: em-calc(16);
@@ -1317,7 +1317,7 @@ $topbar-link-bg-active: #fff; // darken($topbar-bg-color, 3%);
 // Divider Styles
 
 // $topbar-divider-border-bottom: solid 2px lighten($topbar-link-color, 10%);
-$topbar-divider-border-top: solid 2px $topbar-link-color;
+// $topbar-divider-border-top: solid 2px $topbar-link-color;
 
 // Sticky Class
 
