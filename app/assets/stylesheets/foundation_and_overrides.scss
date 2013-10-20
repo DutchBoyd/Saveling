@@ -86,7 +86,7 @@ $primary-color: #696969;
 
 // Make sure border radius matches unless we want it different.
 
-// $global-radius: 3px;
+$global-radius: 25px;
 // $global-rounded: 1000px;
 
 // Inset shadow shiny edges and depressions.
@@ -298,7 +298,7 @@ $row-width: em-calc(1120);
 // $form-label-font-size: em-calc(14);
 // $form-label-font-weight: 500;
 // $form-label-font-color: lighten(#000, 30%);
-// $form-label-bottom-margin: em-calc(3);
+$form-label-bottom-margin: em-calc(0);
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: em-calc(14);

@@ -10,12 +10,14 @@ html
         = csrf_meta_tags
         = yield(:head)
   body class=("#{controller_name} #{action_name}") 
-    #container.container
+    #container.container 
       header
         = render 'layouts/navigation'
         = render 'layouts/messages'
-      #main.row role="main" 
-        = yield
+        #main.row role="main" data-0="background-position:0px 0px;" data-1000000="background-position:0px -50000px;"
+          #skrollr-body= yield
+    / .row
+    /   #background 
     footer#footer
       .row 
         .large-6.columns.large-centered This is footer content
