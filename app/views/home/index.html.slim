@@ -2,8 +2,8 @@
   .large-1.columns.grey-float
     ul#categories
       - Category.all.each do |cat|
-       li.category id=cat.name.parameterize
-          = link_to '&nbsp;'.html_safe, "##{cat.name.parameterize}"
+       li.category
+          = link_to '&nbsp;'.html_safe, "##{cat.name.parameterize}", id: cat.name.parameterize
   .large-11.columns
     .row
       .large-6.columns.grey-float.large-centered#search-box

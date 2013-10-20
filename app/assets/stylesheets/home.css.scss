@@ -21,6 +21,84 @@
 
   #categories{
     list-style: none;
-    
+    .category a{
+      display: block;
+      width: 59px;
+      height: 59px;
+      background-image: image-url('categories/category_icons_sprite.png');
+
+      &#video-games{
+        background-position: -118px 59px;
+        &:hover{
+          background-position: -177px 59px;
+        }
+      }
+      &#music{
+        background-position: -236px -59px;
+        &:hover{
+          background-position: -295px -59px;
+        }
+      }
+      &#movies{
+        background-position: -118px -59px;
+        &:hover{
+          background-position: -177px -59px;
+        }
+      }
+      &#electronics{
+        background-position: -118px 0px;
+        &:hover{
+          background-position: -177px 0px;
+        }
+      }
+      &#hardware-tools{
+        background-position: -236px 0px;
+        &:hover{
+          background-position: -295px 0px;
+        }
+      }
+      &#books{
+        background-position: 0px 0px;
+        &:hover{
+          background-position: -59px 0px;
+        }
+      }
+      &#fashion{
+        background-position: -236px 118px;
+        &:hover{
+          background-position: -295px 118px;
+        }
+      }
+      &#transportation{
+        background-position: -118px 118px;
+        &:hover{
+          background-position: -177px 118px;
+        }
+      }
+      &#physical-space{
+        background-position: 0px 118px;
+        &:hover{
+          background-position: -59px 118px;
+        }
+      }
+      &#instruments{
+        background-position: 0px -59px;
+        &:hover{
+          background-position: -59px -59px;
+        }
+      }
+      &#games{
+        background-position: 0px 59px ;
+        &:hover{
+          background-position: -59px 59px;
+        }
+      }
+      &#everything-else{
+        background-position: -236px 59px;
+        &:hover{
+          background-position: 59px 59px;
+        }
+      }
+    }
   }
 }
