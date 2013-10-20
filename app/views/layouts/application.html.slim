@@ -9,7 +9,7 @@ html
         = javascript_include_tag "application", "data-turbolinks-track" => true
         = csrf_meta_tags
         = yield(:head)
-    = javascript_include_tag src="http://s0.railsrumble.com/banner.js" type="text/javascript"
+
 
   body class=("#{controller_name} #{action_name}") 
     #container.container 
@@ -24,3 +24,6 @@ html
       .row 
         .large-6.columns.large-centered This is footer content
     /! ! end of #container
+  javascript:
+    rumbleBannerPlacement = "bottom";
+  = javascript_include_tag "http://s0.railsrumble.com/banner.js"
