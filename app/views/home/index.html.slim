@@ -10,7 +10,7 @@
         = simple_form_for :search, :url => '/search' do |f|
           .row
             .large-6.columns
-              = f.input :item, required: false, label: false, placeholder: 'Riding Lawnmower'
+              = f.input :item, required: false, label: false, placeholder: 'riding lawn mower'
             .large-6.columns
               .row
                 .small-8.columns
@@ -21,14 +21,14 @@
       .large-12.columns
         #masonry
           - @items.each do |item|
-            .box.grey-float 
+            = link_to item, class: 'box grey-float', data:{ reveal_id: "my-modal", reveal_ajax: "true"} do
               .row
-                .small-12.columns= image_tag(item.images.first.try(:image_url))
+                .small-12.columns= image_tag(item.images.first.try(:image_url, :medium238))
               .row
                 .small-12.columns= item.name
               .row
                 .small-12.columns= humanized_money_with_symbol item.price
-        / ul.large-block-grid-4
-        /   - @items.each do |item|
-        /     li.grey-float 
-        /       span= item.name
+          / ul.large-block-grid-4
+          /   - @items.each do |item|
+          /     li.grey-float 
+          /       span= item.name

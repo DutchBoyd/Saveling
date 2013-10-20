@@ -9,7 +9,12 @@ class ItemsController < ApplicationController
     @item.images.build
   end
 
-  def create
+  def show
+    @item = Item.find(params[:id])
+    render :show, layout: false
+  end
+
+  def create 
     @item = Item.create(item_params.merge(owner: current_user))
     redirect_to user_items_path(current_user)
   end
