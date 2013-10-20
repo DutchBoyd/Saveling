@@ -14,7 +14,7 @@
             .large-6.columns
               .row
                 .small-8.columns
-                  = f.input :city, input_html: { value: request.location.city }, required: false, label: false
+                  = f.input :city, input_html: { value: request.location.try(:city) }, required: false, label: false
                 .small-4.columns
                   = f.submit 'Go!', class: 'button radius'
     .row

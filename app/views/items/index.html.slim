@@ -7,8 +7,14 @@ h3 Items
         th Name
         th Description
         th Thumbnail
+        th Admin
     - current_user.items.each do |i|
       tr
         td= i.name
         td= i.description
-        td= image_tag i.images.first.image_url(:thumb) if i.images.present?
+        td= image_tag i.images.where('image is NOT NULL').first.image_url(:thumb) if i.images.present?
+        td
+          = link_to 'Edit', edit_item_path(i)
+          '|
+          = link_to 'Delete', item_path(i), confirm: 'Are you sure?', method: :delete
+
