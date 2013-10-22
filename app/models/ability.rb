@@ -25,7 +25,7 @@ class Ability
     # The third argument is an optional hash of conditions to further filter the objects.
     # For example, here the user can only update published articles.
     #
-    can :manage, Item, :owner => user
+    can :manage, Item, owner_id: user.id
     can :read, Item
     #   can :update, Article, :published => true
     #
