@@ -23,6 +23,7 @@ gem 'mandrill_mailer'
 gem 'mini_magick'
 gem 'geocoder'
 gem 'skrollr-rails'
+gem 'simple_form_fancy_uploads'
 
 group :assets do
   gem 'therubyracer', :platform=>:ruby

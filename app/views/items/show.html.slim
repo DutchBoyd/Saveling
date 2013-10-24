@@ -16,6 +16,6 @@
         .price= humanized_money_with_symbol(@item.price) + "/week"
       .large-5.columns
         .row
-          .large-8.columns.large-centered= image_tag @item.owner.try(:avatar_url)
+          .large-8.columns.large-centered= image_tag @item.owner.try(:avatar_url, :small80)
         .row
           .large-12.columns.large-centered= @item.owner.name
